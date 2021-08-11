@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+
+:root {
+    --primary-color: #172238;
+    --secondary-color: #202b45;
+    --secondary-color-hover: #26314d;
+    --background-color: #fe9078;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.calculator {
+    padding: 1em;
+    height: fit-content;
+    width: 95%;
+    background-color: var(--primary-color);
+}
+
+.calculator > .calculator-input {
+    display: flex;
+    align-items: center;
+    height: 2.5em;
+    font-weight: 800;
+    font-size: 28px;
+    width: 100%;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: var(--secondary-color);
+}
+
+.calculator > .calculator-body {
+    display: grid;
+    grid-template-areas:
+        "parenthesis-left parenthesis-right percentage ac-btn"
+        "seven eight nine divide"
+        "four five six multiplication"
+        "one two three minus"
+        "zero point equal plus";
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.1em;
+    height: 2.3em;
+    font-size: 24px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    color: white;
+    margin: 1em 0;
+    padding: 0.1em 0.5em;
+}
+
+.card:first-child {
+    margin: 0;
+}
+
+.curvy {
+    border-radius: 5px;
+}
