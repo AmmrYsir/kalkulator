@@ -14,10 +14,18 @@
     box-sizing: border-box;
 }
 
+#header {
+    font-weight: 800;
+    padding-bottom: 1em;
+    color: white;
+    text-shadow: #172238 1px 5px;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: var(--background-color);
 }
@@ -60,9 +68,14 @@ body {
     width: 2.1em;
     height: 2.3em;
     font-size: 24px;
-    background-color: white;
+    background-color: var(--secondary-color);
+    color: white;
     border: none;
     cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color-hover);
 }
 
 .card {
