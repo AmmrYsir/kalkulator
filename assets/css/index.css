@@ -53,7 +53,7 @@ body {
 .calculator > .calculator-body {
     display: grid;
     grid-template-areas:
-        "parenthesis-left parenthesis-right percentage ac-btn"
+        "parenthesis-left parenthesis-right delete ac-btn"
         "seven eight nine divide"
         "four five six multiplication"
         "one two three minus"

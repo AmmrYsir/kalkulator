@@ -12,9 +12,10 @@
     <body>
         <h1 id="header">KALKULATOR</h1>
         <div class="calculator curvy">
-            <div class="card calculator-input curvy">50 + 10 + 300 + 500</div>
+            <div class="card calculator-input curvy" id="input">0</div>
             <div class="card calculator-body curvy">
                 <button
+                    onclick="calculatorButton('parenthesis-left', '(')"
                     class="btn curvy"
                     id="parenthesis-left"
                     style="grid-area: parenthesis-left"
@@ -22,6 +23,7 @@
                     (
                 </button>
                 <button
+                    onclick="calculatorButton('parenthesis-right', ')')"
                     class="btn curvy"
                     id="parenthesis-right"
                     style="grid-area: parenthesis-right"
@@ -29,16 +31,23 @@
                     )
                 </button>
                 <button
+                    onclick="back()"
                     class="btn curvy"
                     id="percentage"
-                    style="grid-area: percentage"
+                    style="grid-area: delete"
                 >
-                    %
+                    DEL
                 </button>
-                <button class="btn curvy" id="ac-btn" style="grid-area: ac-btn">
+                <button
+                    onclick="clearInput()"
+                    class="btn curvy"
+                    id="ac-btn"
+                    style="grid-area: ac-btn"
+                >
                     AC
                 </button>
                 <button
+                    onclick="calculatorButton('seven', '7')"
                     class="btn margin-card curvy"
                     id="seven"
                     style="grid-area: seven"
@@ -46,6 +55,7 @@
                     7
                 </button>
                 <button
+                    onclick="calculatorButton('eight', '8')"
                     class="btn margin-card curvy"
                     id="eight"
                     style="grid-area: eight"
@@ -53,6 +63,7 @@
                     8
                 </button>
                 <button
+                    onclick="calculatorButton('nine', '9')"
                     class="btn margin-card curvy"
                     id="nine"
                     style="grid-area: nine"
@@ -60,6 +71,7 @@
                     9
                 </button>
                 <button
+                    onclick="calculatorButton('divide', ' / ')"
                     class="btn margin-card curvy"
                     id="divide"
                     style="grid-area: divide"
@@ -67,6 +79,7 @@
                     /
                 </button>
                 <button
+                    onclick="calculatorButton('four', '4')"
                     class="btn margin-card curvy"
                     id="four"
                     style="grid-area: four"
@@ -74,6 +87,7 @@
                     4
                 </button>
                 <button
+                    onclick="calculatorButton('five', '5')"
                     class="btn margin-card curvy"
                     id="five"
                     style="grid-area: five"
@@ -81,6 +95,7 @@
                     5
                 </button>
                 <button
+                    onclick="calculatorButton('six', '6')"
                     class="btn margin-card curvy"
                     id="six"
                     style="grid-area: six"
@@ -88,6 +103,7 @@
                     6
                 </button>
                 <button
+                    onclick="calculatorButton('multiplication', ' * ')"
                     class="btn margin-card curvy"
                     id="multiplication"
                     style="grid-area: multiplication"
@@ -95,6 +111,7 @@
                     X
                 </button>
                 <button
+                    onclick="calculatorButton('one', '1')"
                     class="btn margin-card curvy"
                     id="one"
                     style="grid-area: one"
@@ -102,6 +119,7 @@
                     1
                 </button>
                 <button
+                    onclick="calculatorButton('two', '2')"
                     class="btn margin-card curvy"
                     id="two"
                     style="grid-area: two"
@@ -109,6 +127,7 @@
                     2
                 </button>
                 <button
+                    onclick="calculatorButton('three', '3')"
                     class="btn margin-card curvy"
                     id="three"
                     style="grid-area: three"
@@ -116,6 +135,7 @@
                     3
                 </button>
                 <button
+                    onclick="calculatorButton('minus', ' - ')"
                     class="btn margin-card curvy"
                     id="minus"
                     style="grid-area: minus"
@@ -123,6 +143,7 @@
                     -
                 </button>
                 <button
+                    onclick="calculatorButton('zero', '0')"
                     class="btn margin-card curvy"
                     id="zero"
                     style="grid-area: zero"
@@ -130,6 +151,7 @@
                     0
                 </button>
                 <button
+                    onclick="calculatorButton('point', '.')"
                     class="btn margin-card curvy"
                     id="point"
                     style="grid-area: point"
@@ -137,6 +159,7 @@
                     .
                 </button>
                 <button
+                    onclick="calculate()"
                     class="btn margin-card curvy"
                     id="equal"
                     style="grid-area: equal"
@@ -144,6 +167,7 @@
                     =
                 </button>
                 <button
+                    onclick="calculatorButton('plus', ' + ')"
                     class="btn margin-card curvy"
                     id="plus"
                     style="grid-area: plus"
@@ -152,5 +176,7 @@
                 </button>
             </div>
         </div>
+
+        <script src="/assets/js/main.js"></script>
     </body>
 </html>
